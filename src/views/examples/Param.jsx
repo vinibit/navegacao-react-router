@@ -1,12 +1,13 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
 const Param = () => {
-    const { id } = []//useParams();
-
+    
+    const { id } = useParams()
     return (
         <div>
-            <h1>Param Component</h1>
-            <p>Parameter: {id}</p>
+            <h1>Parâmetro</h1>
+            <h2>Valor: {id}</h2>
         </div>
     );
 };
