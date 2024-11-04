@@ -7,8 +7,10 @@ import Content from '../components/layout/Content'
 const App = () => {
     return (
         <div className="App">
-            <Menu />
-            <Content />
+            <Router>
+                <Menu />
+                <Content />
+            </Router>
         </div>
     )
 }
