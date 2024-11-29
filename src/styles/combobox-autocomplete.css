@@ -1,0 +1,230 @@
+.combobox-list {
+  position: relative;
+}
+
+.combobox .group {
+  /* display: inline-flex; */
+  display: flex;
+  /* padding: 4px; */
+  cursor: pointer;
+  width: 100%;
+}
+
+.combobox input,
+.combobox button {
+  /* background-color: white;
+  color: black;
+  box-sizing: border-box; */
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  /* border: 1px solid red; */
+  position: relative;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.combobox input {
+  /* width: 150px; */
+  width: 100%;
+  /* border-right: none;
+  outline: none;
+  font-size: 87.5%;
+  padding: 1px 3px; */
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  height: auto;
+  position: relative;
+}
+
+.combobox button {
+  /* width: 19px; */
+  /* border: 1px solid var(--color-border); */
+  padding: 5px;
+  line-height: normal;
+  height: auto;
+  /* border-left: none; */
+  border: none;
+  background-color: var(--color-theme-background-main);
+  /* color: rgb(0 90 156); */
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+
+.combobox button[aria-expanded="true"] svg {
+  transform: rotate(180deg) translate(0, -3px);
+}
+
+.combobox button[aria-expanded="true"] span {
+  transform: rotate(180deg) translate(0, -3px);
+}
+
+ul[role="listbox"] {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  /* left: 0px; */
+  /* top: 3.3em; */
+  /* top: 0; */
+  list-style: none;
+  background-color: var(--color-theme-background-main);
+  display: none;
+  box-sizing: border-box;
+  /* border: 2px solid var(--color-border); */
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.3);
+  max-height: 250px;
+  /* width: 168px; */
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* font-size: 87.5%; */
+  cursor: pointer;
+  z-index: 1;
+
+  font-size: 1.5rem;
+}
+
+ul[role="listbox"] li[role="option"] {
+  margin: 0;
+  display: block;
+  padding-left: 0.5em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* focus and hover styling */
+
+.combobox .group.focus,
+.combobox .group:hover {
+  /* padding: 2px; */
+  outline: 2px solid currentcolor;
+  /* border: 2px solid blue; */
+  /* border-radius: 4px; */
+}
+
+.combobox .group.focus polygon,
+.combobox .group:hover polygon {
+  fill-opacity: 1;
+}
+
+.combobox .group.focus input,
+.combobox .group.focus button,
+.combobox .group input:hover,
+.combobox .group button:hover {
+  /* background-color: #def; */
+}
+
+[role="listbox"].focus [role="option"][aria-selected="true"],
+[role="listbox"] [role="option"]:hover {
+  background-color: var(--color-theme-selection);
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
+  /* outline: 2px solid currentcolor; */
+  /* border-bottom: 2px solid currentcolor; */
+}
+
+/* CAIXA COMBINADA - INICIO */
+
+/* .caixa-combinada,
+.combobox input {
+  height: 4rem !important;
+  font-size: 1.6rem;
+  -webkit-border-radius: 4px;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius: 4px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 0.375rem 0.75rem;
+}
+
+ul[aria-label="caixa-combinada"] {
+  margin-top: 1.6rem;
+  background-color: var(--color-01);
+  z-index: 10;
+  border-color: var(--color-12);
+  border-width: 1px;
+  -webkit-border-radius: 0;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius: 0;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-style: none;
+}
+
+.combobox .group {
+  display: inline-flex;
+  padding: 0.4rem 0.4rem 0.4rem 0;
+  cursor: pointer;
+}
+
+ul[role="listbox"] [role="option"]:hover {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 0px solid var(--color-01);
+  border-bottom: 0px solid var(--color-01);
+}
+
+ul[aria-label="caixa-combinada"][role="listbox"] li[role="option"] {
+  padding: 10px;
+}
+
+.combobox input,
+.combobox button {
+  border: 1px solid var(--color-21);
+}
+
+.combobox .group.focus,
+.combobox .group:hover {
+  padding: 2px;
+  padding: 0.4rem 0.4rem 0.4rem 0;
+  border: 2px solid currentcolor;
+  border: 0 none white;
+  border-radius: 4px;
+  border-radius: 0;
+}
+
+ul[aria-label="caixa-combinada"][role="listbox"] li[role="option"] {
+  font-size: 1.5rem;
+  height: 45px;
+}
+
+[role="listbox"] [role="option"]:hover {
+  background-color: var(--color-33);
+}
+
+.combobox .group.focus input,
+.combobox .group.focus button,
+.combobox .group input:hover,
+.combobox .group button:hover {
+  background-color: var(--color-01);
+}
+
+.combobox input {
+  width: 100%;
+}
+
+button[aria-label="caixa-combinada"] {
+  height: 4rem;
+}
+
+[role="listbox"].focus [role="option"][aria-selected="true"] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+} */
+
+/* CAIXA COMBINADA - FIM */

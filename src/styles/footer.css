@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* RODAPE - INICIO */
+.footer-credits {
+  min-height: 4rem;
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+  font-size: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0rem;
+}
+
+.footer-project {
+  min-height: 12rem;
+  background-color: var(--color-footer-disclaimers-background);
+  color: var(--color-footer-text);
+}
+
+.logo-imagem {
+  width: 19.2rem;
+}
+
+.logo-projeto {
+  display: inline-block;
+}
+
+.logo-prodam,
+.logo-prodam:hover {
+  background: url(../../public/img/lgo_prodam_footer.png) no-repeat 50% 50%;
+  background-size: contain;
+  width: 90px;
+  height: 40px;
+  display: inline-block;
+  outline-color: transparent;
+  color: transparent;
+  float: right;
+  margin-right: 1rem;
+}
+/* RODAPE - FIM */

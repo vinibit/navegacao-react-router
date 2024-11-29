@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/* MODAL - INICIO */
+
+.modal-header .btn-close {
+  display: flex;
+  padding: 0;
+  width: 2.7rem;
+  height: 2.7rem;
+  opacity: 0.9;
+  margin-top: -4rem;
+}
+
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+.modal-content {
+  -moz-border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+.modal h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-35);
+  padding: 0 1rem;
+}
+
+.modal .close {
+  opacity: 1;
+}
+
+/* MODAL - FIM */

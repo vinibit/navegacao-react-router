@@ -17,6 +17,9 @@ const Menu = () => {
                         <Link to="/param/Nice">Parametro #2</Link>
                     </li>
                     <li>
+                        <Link to="/register">Registro</Link>
+                    </li>
+                    <li>
                         <Link to="/about">Sobre</Link>
                     </li>
                     <li>

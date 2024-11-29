@@ -1,0 +1,61 @@
+.br-sign-in,
+.br-button.sign-in {
+  --interactive: #1351b4;
+  --interactive-rgb: 19, 81, 180, 0.16;
+  --background-light: #f8f8f8;
+
+  --button-radius: 100em;
+  --button-xsmall: 24px;
+  --button-small: 32px;
+  --button-medium: 40px;
+  --button-large: 48px;
+  --button-size: var(--button-medium);
+
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: var(--button-radius);
+  color: var(--interactive);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  --sign-in-img: 20px;
+  background-color: var(--background-light);
+}
+
+.br-sign-in:disabled,
+.br-button.sign-in:disabled {
+  cursor: not-allowed;
+}
+
+.br-sign-in:not(:disabled):focus,
+.br-button.sign-in:not(:disabled):focus {
+  outline: none;
+}
+
+.br-sign-in:not(:disabled):not(:disabled):hover,
+.br-button.sign-in:not(:disabled):not(:disabled):hover {
+  background-color: rgba(19, 81, 180, 0.16);
+}
+
+.br-sign-in:not(:disabled):not(:disabled):active,
+.br-button.sign-in:not(:disabled):not(:disabled):active {
+  background-color: rgba(19, 81, 180, 0.45);
+}
+
+.contraste1 .br-sign-in img {
+  filter: grayscale(100%) contrast(0) brightness(200%);
+}
+
+.br-sign-in img,
+.br-button.sign-in img {
+  max-height: var(--sign-in-img);
+}
+
+/*# sourceMappingURL=signin.css.map*/
